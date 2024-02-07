@@ -47,13 +47,13 @@ int inserisciNumero(int a1, int a2, int a[][a2], int a3[][a2]){
 	if(posx >= 9 || posx < 0 || posy >= 9 || posy < 0){
 
 		printf("\nCoordinate non valide\n");
-		return 2;
+		return 1;
 	}
 
 	if(a[posy][posx]== 1 || a[posy][posx]== 2 || a[posy][posx]== 3 || a[posy][posx]== 4 || a[posy][posx]== 5 || a[posy][posx]== 6 || a[posy][posx]== 7 || a[posy][posx]== 8 || a[posy][posx]== 9){
 
 		printf("\nValore gia inserito in questa posizione\n");
-		return 2;
+		return 1;
 	}
 
 
@@ -64,7 +64,7 @@ int inserisciNumero(int a1, int a2, int a[][a2], int a3[][a2]){
  	if(numero >= 10 || numero <= 0 || numero >= 10 || numero <= 0){
 
 		printf("\nValore non valido\n");
-		return 2;
+		return 1;
 	}		
 
 	
@@ -82,7 +82,7 @@ int inserisciNumero(int a1, int a2, int a[][a2], int a3[][a2]){
 		
 	}
 
-	return 2;
+	return 1;
 }
 
 
@@ -277,7 +277,7 @@ static void colore(unsigned short colore)
 {
 	//GetStdHandle() puo recuperare uno standard input output o handle di errore
 	//TD_OUTPUT_HANDLE	Il dispositivo di output standard. Inizialmente si tratta del buffer dello schermo della console attivo
-	//handle è un riferimento astratto a una risorsa che viene utilizzata quando il software applicativo fa riferimento a blocchi di memoria o oggetti gestiti da un altro sistema come un database o un sistema operativo 
+	//handle Ã¨ un riferimento astratto a una risorsa che viene utilizzata quando il software applicativo fa riferimento a blocchi di memoria o oggetti gestiti da un altro sistema come un database o un sistema operativo 
     HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE);
     //Imposta gli attributi dei caratteri scritti nel buffer dello schermo della console
     SetConsoleTextAttribute(hCon,colore);
@@ -293,7 +293,7 @@ static void inizializza(int a1, int a2,int a[][a2], int a3[][a2]){
 		}
 	}	
 }
-//l errore è qua perche se termino con inserisci numero non mi svuota
+//l errore Ã¨ qua perche se termino con inserisci numero non mi svuota
 int inserisciRandom(int a1, int a2, int a[][a2], int a3[][a2], int random, int id){
 	
 	int n = 11, i, num, riga = 0, j = 0;
